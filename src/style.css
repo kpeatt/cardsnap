@@ -65,3 +65,17 @@ input[type="number"] {
 #cardsnapInput {
 	display: none;
 }
+
+#list {
+	display: block;
+	margin-top: 15px;
+}
+
+#list span {
+	display: block;
+	margin-bottom: 10px;
+}
+
+#list img {
+	width: 100%;
+}
