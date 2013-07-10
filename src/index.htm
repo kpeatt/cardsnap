@@ -32,6 +32,10 @@
 
 	      var reader = new FileReader();
 
+	      reader.onloadstart = function(e) {
+			  document.getElementById('cardnumber').className = 'loading';
+			};
+
 	      // Closure to capture the file information.
 	      reader.onload = (function(theFile) {
 	        return function(e) {
@@ -40,6 +44,7 @@
 	          span.innerHTML = ['<img class="thumb" src="', e.target.result,
 	                            '" title="', escape(theFile.name), '"/>'].join('');
 	          document.getElementById('list').insertBefore(span, null);
+	          document.getElementById('cardnumber').className = '';
 	        };
 	      })(f);
 
@@ -54,8 +59,7 @@
 	  	$('#cardsnapInput').trigger('click');
 	  });
 
-	  $('html').on('touchstart', function() {
-	  });
+	  $('html').on('touchstart', function() {});
 	</script>
 </body>
 </html>

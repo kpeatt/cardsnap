@@ -34,6 +34,10 @@ input[type="number"] {
 	box-shadow: 1px 1px 0 hsla(180,75%,25%, 0.15);
 }
 
+.loading {
+	border-color: red;
+}
+
 .cardsnap-upload {
 	position: absolute;
 	top: 0;
