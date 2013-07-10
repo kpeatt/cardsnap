@@ -1,3 +1,13 @@
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: hsla(45,15%,95%,1);
+}
+
 input[type="number"] {
 	width: 100%;
 	padding: 10px;
@@ -6,5 +16,52 @@ input[type="number"] {
 }
 
 #cameraInput {
+	-webkit-appearance: none;
+}
+
+.cardsnap {
+	position: relative;
+}
+
+.cardsnap > input {
+	display: block;
+	height: 40px;
+
+	-webkit-appearance: none;
+    border: 1px solid white;
+
+	border-radius: 2px 0 0 2px;
+	box-shadow: 1px 1px 0 hsla(180,75%,25%, 0.15);
+}
+
+.cardsnap-upload {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	width: 50px;
+	height: 40px;
+
+	cursor: pointer;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.cardsnap-upload::after {
+	content: '\f030';
+
+	display: block;
+	width: 100%;
+
+	text-align: center;
+	line-height: 40px;
+	font-family: 'FontAwesome';
+	color: hsl(180,100%,25%);
+}
+
+.cardsnap-upload:active::after {
+	color: hsl(180,100%,30%);
+}
+
+#cardsnapInput {
 	display: none;
 }

@@ -5,9 +5,14 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<input type="number" name="cardnumber" id="cardnumber" placeholder="Card Number" pattern="[0-9]*">
+	<div class="cardsnap">
+		<input type="number" name="cardnumber" id="cardnumber" placeholder="Card Number" pattern="[0-9]*">
+		<div class="cardsnap-upload">
 
-	<input type="file" capture="camera" accept="image/*" id="cameraInput">
+		</div>
+	</div>
+
+	<input type="file" capture="camera" accept="image/*" id="cardsnapInput">
 
 	<output id="list"></output>
 
@@ -43,10 +48,13 @@
 	    }
 	  }
 
-	  document.getElementById('cameraInput').addEventListener('change', handleFileSelect, false);
+	  document.getElementById('cardsnapInput').addEventListener('change', handleFileSelect, false);
 
-	  $('#cardnumber').click(function() {
-	  	$('#cameraInput').trigger('click');
+	  $('.cardsnap-upload').click(function() {
+	  	$('#cardsnapInput').trigger('click');
+	  });
+
+	  $('html').on('touchstart', function() {
 	  });
 	</script>
 </body>
